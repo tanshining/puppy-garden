@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#d9a879" />
+    <meta name="description" content="一座可以转动、缩放与跟随小狗的治愈系春日花园微缩世界。" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Puppy Garden · 小狗花园</title>
+  </head>
+  <body>
+    <main id="app" aria-label="小狗花园三维场景">
+      <div class="sky-wash" aria-hidden="true"></div>
+      <div id="scene" aria-hidden="true"></div>
+
+      <header class="brand" aria-label="作品标题">
+        <span class="brand-kicker">SPRING DIORAMA · 1/64</span>
+        <h1>Puppy Garden</h1>
+        <p>两个小家伙，绕着春天跑一圈。</p>
+      </header>
+
+      <div class="hint" id="hint">
+        <span class="hint-dot"></span>
+        拖动环游 · 滚轮缩放 · 点一点小狗
+      </div>
+
+      <aside class="dog-card" id="dog-card" aria-live="polite">
+        <span class="dog-card__eyebrow">正在跟随</span>
+        <strong id="dog-name">奶糖</strong>
+        <span id="dog-state">追逐中</span>
+      </aside>
+
+      <nav class="controls" aria-label="场景控制">
+        <button id="auto-button" class="round-button is-active" type="button" aria-pressed="true" aria-label="切换自动环绕">
+          <span class="round-button__icon">◌</span>
+          <span>环绕</span>
+        </button>
+        <button id="reset-button" class="round-button" type="button" aria-label="重置视角">
+          <span class="round-button__icon">⌂</span>
+          <span>重置</span>
+        </button>
+      </nav>
+
+      <div class="loading" id="loading" role="status">
+        <div class="loading-mark">✿</div>
+        <span>正在唤醒花园</span>
+        <div class="loading-line"><i></i></div>
+      </div>
+
+      <div class="vignette" aria-hidden="true"></div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
